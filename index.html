@@ -1,33 +1,35 @@
-virtualisation avec VirtualBox
-
-La virtualisaion
+<h4>La virtualisation</h4>
 
 La virtualisation est la manière de faire croire à un système qu'il tourne dans un environnement normal, c'est-à-dire avec un accès direct au matériel.
 
-Par exemple, sur mon PC qui tourne sous Windows, j'aimerai pouvoir installer Linux à l'intérieur.
-L'OS qui acceuille est appelé OS hôte (Windows dans notre cas) et l'OS qui est installé à l'intérieur est appelé l'OS invité. 
-Pour faire ça, j'ai besoin d'une machine virtuelle. Celle-ci va faire croire à mon OS invité (Linux dans notre cas) qu'il est installé en natif, c'est-à-dire installé physiquement sur votre disque dur et elle simulera le hardware (carte réseau, etc.).
+Par exemple, sur mon PC qui tourne sous Windows, j'aimerais pouvoir installer Linux à l'intérieur.
+L'OS qui accueille est appelé OS hôte (Windows dans notre cas) et l'OS qui est installé à l'intérieur est appelé l'OS invité. 
+Pour faire ça, j'ai besoin d'une machine virtuelle. Celle-ci va faire croire à mon OS invité (Linux dans notre cas) qu'il est installé en natif, c'est-à-dire installé physiquement sur votre disque dur. Par conséquent, le rôle de la machine virtuelle et de simuler le hardware (disque, carte réseau, etc.).
 
 
-Activation
+<h4>Activation</h4>
 
 Si votre processeur supporte la virtualisation, il faut l'activer afin de pouvoir utiliser d'une manière plus performante votre OS invité. 
 
 En effet, si vous n'activer pas la virtualisation vous ne pourrez installer qu'un système invité de 32 bits (Figure 1.1) et vous ne pourrez pas allouer plus de processeurs à l'OS invité (Figure 1.2). En d'autres termes, vous n'exploiter pas les capacités de votre PC et l'OS invité tournera lentement.
 
-Pour cela il va falloire aller dans votre BIOS. Allumer votre PC, appuyer sur ESC. Vous arrivz à un menu suivant (en tout cas sur un HP) (voir Figure 1.4).
+Pour cela il va falloir aller dans votre BIOS. Allumer votre PC, appuyer sur ESC. Vous arrivez à un menu suivant (en tout cas sur un HP) (voir Figure 1.4).
 
-Aller dans le menu Security, ensuite activer Vtd et Vtx (avec la bare d'espace) (voir Figure 1.4). Faire ensuite F10. Ensuite Aller dans le menu Exit et choisissez Save and Exit (Figure 1.4).
+Aller dans le menu Security, ensuite activer Vtd et Vtx (avec la bare d'espace). Faire ensuite F10. Ensuite Aller dans le menu Exit et choisissez Save and Exit.
+
+Maintenant, vous pouvez installer un version 64 bits d'un OS invité et allouer plus de processeurs à ce dernier.
 
 
-Taille de l'écran
+<h4>Taille de l'écran</h4>
 
 Un fois que vous avez installé l'OS invité, Linux dans notre cas, vous verrez que l'écran est tout petit. Pour pouvoir travailler avec un écran de taille convenable il faut installer les Guest Additions.
-Allez dans le menus Devices et selectionnez <em>Insert Guest Additions CD image</em>. Confirmer le pop en cliquant sur run.
+Allez dans le menu <em>Devices</em> de VirtualBox et selectionnez <em>Insert Guest Additions CD image</em>. Confirmer le pop-up en cliquant sur run.
 
 
-Copy / Paste
+<h4>Copy / Paste</h4>
 
-Pour pouvoir faire des copy / paste entre vos différents environnements, il faut aller dans les settings de vitual box, General, Advanced et dans Shared Clipboard sélectionner <em>Bidrectional</em>. 
+Pour pouvoir faire des copy / paste entre vos différents environnements, il faut aller dans les <em>Settings</em> de VitualBox, <em>General</em>, <em>Advanced</em> et dans <em>Shared Clipboard</em> sélectionner <em>Bidrectional</em>. 
 
 
+<h4>Création d'un réseau virtuel</h4>
+TO DO.
