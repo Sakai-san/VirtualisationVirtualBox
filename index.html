@@ -2,34 +2,36 @@
 
 La virtualisation est la manière de faire croire à un système qu'il tourne dans un environnement normal, c'est-à-dire avec un accès direct au matériel.
 
-Par exemple, sur mon PC qui tourne sous Windows, j'aimerais pouvoir installer Linux à l'intérieur.
-L'OS qui accueille est appelé OS hôte (Windows dans notre cas) et l'OS qui est installé à l'intérieur est appelé l'OS invité. 
-Pour faire ça, j'ai besoin d'une machine virtuelle. Celle-ci va faire croire à mon OS invité (Linux dans notre cas) qu'il est installé en natif, c'est-à-dire installé physiquement sur votre disque dur. Par conséquent, le rôle de la machine virtuelle et de simuler le hardware (disque, carte réseau, etc.).
+Par exemple, j'ai un PC de 64 bits qui tourne sour Windows. J'aimerais pouvoir installer Linux à l'intérieur.
+L'OS qui accueille est appelé <strong>OS hôte</strong> (Windows dans notre cas) et l'OS qui est installé à l'intérieur est appelé l'OS invité. 
+Pour faire ça, j'ai besoin d'une <strong>machine virtuelle</strong>. Celle-ci va faire croire à mon <strong>OS invité</strong> (Linux dans notre cas) qu'il est installé en natif, c'est-à-dire installé physiquement sur votre disque dur. Par conséquent, le rôle de la machine virtuelle et de simuler le hardware (disque, carte réseau, etc.).
 
 
 <h4>Activation</h4>
 
-Si votre processeur supporte la virtualisation, il faut l'activer afin de pouvoir utiliser d'une manière plus performante votre OS invité. 
+Si le processeur de votre machine supporte la virtualisation, il faut l'activer afin de pouvoir utiliser d'une manière plus performante votre OS invité. 
 
-En effet, si vous n'activer pas la virtualisation vous ne pourrez installer qu'un système invité de 32 bits (Figure 1.1) et vous ne pourrez pas allouer plus de processeurs à l'OS invité (Figure 1.2). En d'autres termes, vous n'exploiter pas les capacités de votre PC et l'OS invité tournera lentement.
+En effet, si vous n'activer pas la virtualisation vous ne pourrez installer qu'un système invité de 32 bits et vous ne pourrez pas allouer plus de processeurs à l'OS invité. En d'autres termes, vous n'exploiter pas les capacités de votre machine et l'OS invité tournera lentement.
 
-Pour cela il va falloir aller dans votre BIOS. Allumer votre PC, appuyer sur ESC. Vous arrivez à un menu suivant (en tout cas sur un HP) (voir Figure 1.4).
+Pour cela il va falloir aller dans votre BIOS. Allumez votre PC, appuyer sur ESC. Vous arrivez au menu de la <a href="#attachment_154">Figure 1.1</a> (en tout cas sur un HP). Choisissez <em>Computer Setup</em>. Ensuite allez dans l'onglet <em>Security</em>, sous <em>System Security</em>. Activer VTx et VTd (avec la bare d'espace). Faites F10 et quittez le BIOS (<em>File</em>, <em>Save Changes and Exit</em>).
 
-Aller dans le menu Security, ensuite activer Vtd et Vtx (avec la bare d'espace). Faire ensuite F10. Ensuite Aller dans le menu Exit et choisissez Save and Exit.
-
-Maintenant, vous pouvez installer une version 64 bits de l'OS invité et allouer plus de processeurs à ce dernier.
+Maintenant, vous pouvez installer une version 64 bits de l'OS invité et allouer plus de processeurs à ce dernier (<em>Settings</em>, <em>System</em>, <em>Processor</em>).
 
 
 <h4>Taille de l'écran</h4>
 
-Un fois que vous avez installé l'OS invité, Linux dans notre cas, vous verrez que l'écran est tout petit. Pour pouvoir travailler avec un écran de taille convenable il faut installer les Guest Additions.
-Allez dans le menu <em>Devices</em> de VirtualBox et selectionnez <em>Insert Guest Additions CD image</em>. Confirmer le pop-up en cliquant sur run.
+Un fois que vous avez installé l'OS invité, Linux dans notre cas, vous verrez que l'écran est tout petit (voir <a href="#attachment_155">Figure 1.2</a>). Pour pouvoir travailler avec un écran de taille convenable il faut installer les Guest Additions.
+Pour cela, allez dans le menu <em>Devices</em> de VirtualBox et selectionnez <em>Insert Guest Additions CD image</em>. Confirmez le pop-up en cliquant sur run.
 
 
 <h4>Copy / Paste</h4>
 
-Pour pouvoir faire des copy / paste entre vos différents environnements, il faut aller dans les <em>Settings</em> de VitualBox, <em>General</em>, <em>Advanced</em> et dans <em>Shared Clipboard</em> sélectionner <em>Bidrectional</em>. 
+Pour pouvoir faire des copy / paste entre vos différents environnements (OS), il faut aller dans les <em>Settings</em> de VitualBox, <em>General</em>, <em>Advanced</em>. Dans <em>Shared Clipboard</em> sélectionnez <em>Bidrectional</em>. 
 
+
+<h4>Ecran dual de l'OS invité</h4>
+
+Si vous voulez avoir un affichage sur deux écrans dans votre OS invité, il faut aller dans les <em>Settings</em> de VitualBox, <em>Display</em>, <em>Video</em>. Dans <em>Monitor Count</em>, mettez le slider à 2. 
 
 <h4>Création d'un réseau virtuel</h4>
 TO DO.
